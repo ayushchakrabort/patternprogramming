@@ -136,6 +136,116 @@ class PATTERN:
                     print(val+1,end=" ")
                     val+=1
             print()
+
+    def shape(self,n):
+        for i in range(n):
+            for j in range(n):
+                if i >=j:
+                    print("*",end=" ")
+                else:
+                    print(" ",end=" ")
+            print()
+
+    def shape2(self,n):
+        for i in range(n):
+            for j in range(n):
+                if i <=j:
+                    print("*",end=" ")
+                else:
+                    print(" ",end=" ")
+            print()
+
+    def shape3(self,n):
+        for i in range(n):
+            for j in range(n):
+                if i==j:
+                    print("*",end=" ")
+                else:
+                    print(" ",end=" ")
+            print()            
+    def shape4(self,n):
+        for i in range(n):
+            for j in range(n):
+                if i+j>=n-1:
+                    print("*",end=" ")
+                else:
+                    print(" ",end=" ")
+            print()
+    def shape5(self,n):
+        for i in range(n):
+            for j in range(n):
+                if i+j<=n-1:
+                    print("*",end=" ")
+                else:
+                    print(" ",end=" ")
+            print()
+
+    def shape6(self,n):
+        val1=1
+        val2=1
+        for i in range(n):  
+            for j in range(n):
+                if i==j:
+                    print("*",end=" ")
+                elif i>j:
+                    print(val1,end=" ")
+                    val1+=1
+                    if val1>9:
+                        val1=1
+                else:
+                    print(val2,end=" ")
+                    val2+=1
+                    if val2>9:
+                        val2=1
+            print()
+
+    def shape7(self,n):
+        n=int(input("n: "))
+        val=1
+        for i in range(n):  
+            for j in range(n):
+                if i+j>=n-1:
+                    if i%2==0:
+                        print(val,end=" ")
+                    else:
+                        print("*",end=" ")
+                else:
+                    print(" ",end=" ")
+            if i%2==0:
+                val+=1
+                if val>9:
+                    val=1
+            print()
+
+    def shape8(self,n):
+        val=1
+        p=True
+        for i in range(1,n+1):  
+            for j in range(1,n+1):
+                if p==True:
+                    print(val,end=" ")
+                    val+=1
+                    if val>9:
+                        val=1
+                    p=False
+                else:
+                    print("*",end=" ")
+                    p=True
+            print()
+
+    def shape9(self,n):
+        n=int(input ("n: "))
+        for i in range(1,n+1):
+            for j in range(1,n+1):
+                if i==j or i+j==n+1:
+                    print("*",end=" ")
+                else:
+                    print(" ",end=" ")
+            print()
+
+
+
+
 obj=PATTERN()
 # obj.rectangle(4,5)
 # obj.square(3)
@@ -150,7 +260,16 @@ obj=PATTERN()
 # obj.ptrn6(5)
 # obj.ptrn7(5)
 # obj.ptrn8(5)
-obj.ptrn9(5)
+# obj.ptrn9(5)
+# obj.shape(5)
+# obj.shape2(5)
+# obj.shape3(5)
+# obj.shape4(5)
+# obj.shape5(5)
+# obj.shape6(5)
+# obj.shape7(5)
+# obj.shape8(5)
+obj.shape9(5)
 
 
 
