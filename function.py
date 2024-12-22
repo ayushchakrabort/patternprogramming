@@ -242,9 +242,45 @@ class PATTERN:
                 else:
                     print(" ",end=" ")
             print()
+    def shape10():
+        n=int(input("n: "))
+        for i in range(n):
+            for j in range(n):
+                if i==n-1 or j==n-1 or i==0 or j==0:
+                    print("*",end=" ")
+                else:    
+                    print(" ",end=" ")
+            print()
 
+    def shape11(self,n):
+        n=int(input("n: "))
+        for i in range(n):
+            for j in range(n):
+                if i==n-1 or j==n-1 or i==0 or j==0 or (i==n//2 and j==n//2):
+                    print("*",end=" ")
+                else:    
+                    print(" ",end=" ")
+            print()
 
+    def shape12():
+        n=int(input("n: "))
+        for i in range(n):
+            for j in range(n):
+                if i==0 or j==0 or i==n-2 or j==n-1:
+                    print("*",end=" ")
+                else:
+                    print(" ",end=" ")
+            print()
 
+    def shape13(self,n):
+        n=int(input("n: "))
+        for i in range(n):
+            for j in range(n):
+                if i==j or i==n-1 or j==0:
+                    print("*",end=" ")
+                else:
+                    print(" ",end=" ")
+            print()
 
 obj=PATTERN()
 # obj.rectangle(4,5)
@@ -269,8 +305,10 @@ obj=PATTERN()
 # obj.shape6(5)
 # obj.shape7(5)
 # obj.shape8(5)
-obj.shape9(5)
-
-
+# obj.shape9(5)
+# obj.shape10(5)
+# obj.shape11(5)
+# obj.shape12(5)
+obj.shape13(5)
 
 
