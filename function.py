@@ -315,6 +315,24 @@ class PATTERN:
                     print(" ",end=" ")
             print()
 
+    def pyramid3(self,n):
+        for i in range(n+1):
+            for j in range(2*n-1):
+                if i+j==n-1 or j-i==n-1 or (i == n - 1 and j % 2 == 0):
+                    print("*",end=" ")
+                else:
+                    print(" ",end=" ")
+            print()
+
+    def pyramid4(self,n):
+        for i in range(n+1):
+            for j in range(2*n+1):
+                if i==j or i+j==2*n or i==0:
+                    print("*",end=" ")
+                else:
+                    print(" ",end=" ")
+            print()
+
 
 obj=PATTERN()
 # obj.rectangle(4,5)
@@ -346,5 +364,6 @@ obj=PATTERN()
 # obj.shape13(5)
 # obj.pyramid(5)
 # obj.pyramid3(5)
-obj.pyramid2(5)
-
+# obj.pyramid2(5)
+# obj.pyramid3(4)
+# obj.pyramid4(4)
